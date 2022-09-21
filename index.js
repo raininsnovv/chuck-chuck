@@ -6,8 +6,6 @@ const getJoke = async () => {
   const responsive = await (
     await fetch("https://api.chucknorris.io/jokes/random")
   ).json();
-
-  console.log(responsive);
   img.src = responsive.icon_url;
   div.append(responsive.value, img);
 };
